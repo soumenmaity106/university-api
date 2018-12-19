@@ -1,13 +1,13 @@
 {
-  "name": "nodejs-restapi-mongodb",
+  "name": "university-restapi",
   "version": "1.0.0",
-  "description": "NodeJs-RestApis-MongoDB",
+  "description": "University-Restapi",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "NodeJs-RestAPIs-MongoDB"
+    "University-Restapi"
   ],
   "author": "JSA",
   "license": "ISC",
