@@ -1,11 +1,12 @@
-module.exports = function(app){
+module.exports = function (app) {
     var registration = require('../controllers/registration.controllers');
+    const CheckAuth = require('../middleware/check-auth');
 
     //Create a New Registration
-    app.post('/api/registrations',registration.create)
+    app.post('/api/registrations', registration.create)
 
     //Retrieve all Registeation
-    app.get('/api/registrations',registration.findAll)
+    app.get('/api/registrations',CheckAuth, registration.findAll)
 
     // Retrieve a single Registeation by Id
     app.get('/api/registrations/:registrationId', registration.findOne);

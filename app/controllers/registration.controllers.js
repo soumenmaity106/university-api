@@ -1,5 +1,7 @@
 const Registration = require('../models/registration.model');
 
+const CheckAuth = require('../middleware/check-auth');
+
 //Post a Registration
 exports.create = (req,res) =>{
     //Create a Registration 

@@ -2,7 +2,7 @@ module.exports = function(app){
     var programslist = require('../controllers/programslist.controllers');
 
     //Create a New Programslist
-    app.post('/api/programslist',programslist.create)
+    //app.post('/api/programslist',programslist.create)
 
     //Retrieve all Programslist
    app.get('/api/programslist',programslist.findAll)

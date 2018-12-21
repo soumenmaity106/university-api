@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var port = process.env.PORT || 3000
 app.use(bodyParser.json())
 
 // Configuring the database
@@ -25,6 +26,12 @@ require('./app/routes/courselist.routes')(app);
 require('./app/routes/programslist.routes')(app);
 require('./app/routes/placement.routes')(app);
 require('./app/routes/departmentplacement.routes')(app);
+require('./app/routes/centers.routes')(app);
+require('./app/routes/facilitis.routes')(app);
+require('./app/routes/facultyprofile.routes')(app);
+require('./app/routes/hiringcompanise.routes')(app);
+require('./app/routes/coursedetails.routes')(app);
+require('./app/routes/adminlogin.routes')(app)
 //Error route
 app.use((req, res, next) => {
     const error = new Error('Page Not Found');
@@ -43,11 +50,6 @@ app.use((error, req, res, next) => {
 })
 
 // Create a Server
-var server = app.listen(8081, function () {
-
-  var host = server.address().address
-  var port = server.address().port
-
-  console.log("App listening at http://%s:%s", host, port)
-
-})
+ app.listen(port,()=>{
+     console.log(`Server is Start ${port}`)
+ })
