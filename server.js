@@ -26,16 +26,12 @@ require('./app/routes/courselist.routes')(app);
 require('./app/routes/programslist.routes')(app);
 require('./app/routes/placement.routes')(app);
 require('./app/routes/departmentplacement.routes')(app);
-<<<<<<< HEAD
 require('./app/routes/centers.routes')(app);
 require('./app/routes/facilitis.routes')(app);
 require('./app/routes/facultyprofile.routes')(app);
 require('./app/routes/hiringcompanise.routes')(app);
 require('./app/routes/coursedetails.routes')(app);
 require('./app/routes/adminlogin.routes')(app)
-=======
-require('./app/routes/user.routes')(app);
->>>>>>> 1b30554383d899bb6f2614c9df05edcef2993213
 //Error route
 app.use((req, res, next) => {
     const error = new Error('Page Not Found');
